@@ -3,6 +3,7 @@ package com.devsuperior.desafio_02.models;
 import jakarta.persistence.*;
 
 import java.time.Instant;
+import java.util.Objects;
 
 @Entity
 @Table(name = "tb_bloco")
@@ -51,5 +52,19 @@ public class Bloco {
 
     public void setInicio(Instant inicio) {
         this.inicio = inicio;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Bloco bloco = (Bloco) o;
+        return Objects.equals(id, bloco.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 }
