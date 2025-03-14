@@ -12,3 +12,6 @@ desafio - Componentes e injeção de dependência
 desafio 02 - Modelo de domínio e ORM
 ```
 
+```
+desafio 03 - API REST, camadas, CRUD, exceções, validações
+```
